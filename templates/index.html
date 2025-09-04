@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
+    <title>ToDO APP</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
-    <h1> Enter your feedback </h1>
-    <form action="/submit" method="post">
-        <input type="text" name="name" id="name" placeholder="Enter Name">
-        <input type="text" name="message" id="message" placeholder="Enter message">
-        <button type="submit">Submit</button>
+    <h1> Todo App </h1>
+    <form action="/add" method="post">
+        <input type="text" name="task" id="task" placeholder="Enter Task">
+        <input type="date" name="date" id="date">
+        <input type="time" name="time" id="time">
+        <button type="submit">Add Task</button>
     </form>
 
+    <div>
+        {% if task %}
+            {% for t in tasks %}
+                <li>{{ t.task }} , {{ t.date }} , {{ t.time }}</li>
+            {% endfor %}
+        {% endif %}
+    </div>
 </body>
 </html>
