@@ -6,7 +6,7 @@ tasks = []
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html",tasks = tasks)
 
 @app.route("/add", methods=['POST'])
 def submit():
