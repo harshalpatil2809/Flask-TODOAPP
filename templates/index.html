@@ -19,7 +19,8 @@
         {% if tasks %}
         <ul>
             {% for t in tasks %}
-                <li>{{ t.task }} , {{ t.date }} , {{ t.time }}</li>
+                <li><input type="checkbox" name="checkbox" id="checkbox">{{ t.task }} , {{ t.date }} , {{ t.time }}
+                </li>
             {% endfor %}
         </ul>
         {% endif %}

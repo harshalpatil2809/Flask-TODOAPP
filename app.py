@@ -16,5 +16,16 @@ def submit():
     tasks.append({'task':task, 'time':time, 'date':date})
     return render_template("index.html", tasks=tasks)
 
+
+@app.route("/delete")
+def delete():
+    task = request.form['task']
+    date = request.form['date']
+    time = request.form['time']
+    tasks.remove({'task':task, 'time':time, 'date':date})
+    return render_template("index.html")
+
+
+
 if __name__ == "__main__":
     app.run()
