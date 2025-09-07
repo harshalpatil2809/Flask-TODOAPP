@@ -23,7 +23,7 @@ def delete():
     date = request.form['date']
     time = request.form['time']
     tasks.remove({'task':task, 'time':time, 'date':date})
-    return render_template("index.html" )
+    return render_template("index.html",tasks = tasks )
 
 
 

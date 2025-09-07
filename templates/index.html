@@ -19,7 +19,10 @@
         {% if tasks %}
         <ul>
             {% for t in tasks %}
-                <li><input type="checkbox" name="checkbox" id="checkbox">{{ t.task }} , {{ t.date }} , {{ t.time }}
+                <li><input type="checkbox" name="checkbox" id="checkbox">{{ t.task }} | {{ t.date }} | {{ t.time }}
+                <form action="/delete">
+                    <input type="button" value="delete">
+                </form>
                 </li>
             {% endfor %}
         </ul>
