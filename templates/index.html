@@ -17,11 +17,11 @@
 
     <div>
         {% if tasks %}
-        <ul>
+        <ul style="list-style: none;">
             {% for t in tasks %}
                 <li><input type="checkbox" name="checkbox" id="checkbox">{{ t.task }} | {{ t.date }} | {{ t.time }}
-                <form action="/delete">
-                    <input type="button" value="delete">
+                <form action="/delete/{{ loop.index0}}" method="post">
+                    <button type="submit">Delete</button>
                 </form>
                 </li>
             {% endfor %}

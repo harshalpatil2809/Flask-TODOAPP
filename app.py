@@ -17,12 +17,10 @@ def submit():
     return render_template("index.html", tasks=tasks)
 
 
-@app.route("/delete")
-def delete():
-    task = request.form['task']
-    date = request.form['date']
-    time = request.form['time']
-    tasks.remove({'task':task, 'time':time, 'date':date})
+@app.route("/delete/<int:index>", methods=['POST'])
+def delete(index):
+    if 0 <= index < len(tasks):
+        tasks.pop(index)
     return render_template("index.html",tasks = tasks )
 
 
