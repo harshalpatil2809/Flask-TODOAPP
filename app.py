@@ -24,5 +24,5 @@ def delete(index):
     return render_template("index.html",tasks = tasks )
 
 
-def handler(environ, start_response):
-    return app(environ, start_response)
+if __name__ == "__main__":
+    app.run(debug=True,host="0.0.0.0")
