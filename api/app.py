@@ -1,6 +1,6 @@
-from flask import Flask,render_template,request,send_from_directory
+from flask import Flask,render_template,request
 
-app = Flask(__name__, template_folder="../templates",static_folder="../static")
+app = Flask(__name__, template_folder="./templates",static_folder="./static")
 
 tasks = []
 
@@ -27,5 +27,5 @@ def delete(index):
 def handler(environ, start_response):
     return app(environ, start_response)
 
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run()
