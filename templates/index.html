@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1> Todo App </h1>
-    <form action="/add" method="post">
-        <input type="text" name="task" id="task" placeholder="Enter Task">
+    <form action="/add" method="post" class="input-form">
+        <input type="text" name="task" id="task" placeholder="Enter Task" class="task">
         <div>
             <input type="date" name="date" id="date">
             <input type="time" name="time" id="time">
@@ -17,11 +17,12 @@
         <button type="submit">Add Task</button>
     </form>
 
-    <div>
+    <div class="output">
         {% if tasks %}
         <ul style="list-style: none;">
             {% for t in tasks %}
-                <li><input type="checkbox" name="checkbox" id="checkbox">{{ t.task }} | {{ t.date }} | {{ t.time }}
+                <li>
+                <input type="checkbox" name="checkbox" id="checkbox">{{ t.task }} | {{ t.date }} | {{ t.time }}
                 <form action="/delete/{{ loop.index0 }}" method="post">
                     <button type="submit">Delete</button>
                 </form>

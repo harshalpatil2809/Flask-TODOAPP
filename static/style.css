@@ -24,8 +24,85 @@ input{
     background-color: #EAE3DA;
     border: 2px solid #7A624A;
 }
-form{
+.input-form{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+}
+
+
+.task{
+    width: 400px;
+    height: auto;
+    padding: 5px 10px;
+    color:black;
+    border-radius: 40px;
+    outline: none;
+}
+
+form button{
+    width: 100px;
+    height: auto;
+    background-color: #6B5036;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 15px 7px 15px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+/* output styling */
+
+.output{
+    margin-top: 50px;
+    height: 300px;
+    width: 700px;
+    background-color: #EAE3DA;
+    border: 2px solid #7A624A;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 50px 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.output::-webkit-scrollbar{
+    width: 7px;
+    height: auto;
+}
+.output::-webkit-scrollbar-track{
+    background: none;
+    border-radius: 8px;
+}
+.output::-webkit-scrollbar-thumb {
+  background: #C9A66B;
+  border-radius: 8px;
+  border: 2px solid #C9A66B; 
+}
+
+li button{
+    width: 100px;
+    height: auto;
+    background-color: #6B5036;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 15px 7px 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+li{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
