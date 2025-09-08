@@ -1,6 +1,7 @@
 html{
     background-color: #9C8468;
     color: white;
+    font-family: "inter", sans-serif;
 }
 *{
     margin: 0;
@@ -11,8 +12,20 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 h1{
-    font-size: 40px;
+    font-size: 60px;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+input{
+    background-color: #EAE3DA;
+    border: 2px solid #7A624A;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
