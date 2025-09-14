@@ -22,10 +22,13 @@
         <ul style="list-style: none;">
             {% for t in tasks %}
                 <li>
-                <input type="checkbox" name="checkbox" id="checkbox">{{ t.task }} | {{ t.date }} | {{ t.time }}
-                <form action="/delete/{{ loop.index0 }}" method="post">
+                    <form action="/toggle/{{ loop.index0 }}" method="post">
+                        <input type="checkbox" name="completed" id="completed" onchange="this.form.submit()" {% if t.completed%} checked {% endif %}>
+                    </form>
+                    {{ t.task }} | {{ t.date }} | {{ t.time }}
+                    <form action="/delete/{{ loop.index0 }}" method="post">
                     <button type="submit">Delete</button>
-                </form>
+                    </form>
                 </li>
             {% endfor %}
         </ul>
